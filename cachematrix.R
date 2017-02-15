@@ -22,7 +22,7 @@ cacheSolve <- function(x, ...) {
     return(m)
   }
   data<-x$get()
-  m<-ginv(data, ...)
+  m<-solve(data, ...)
   x$setinv(m)
   m       
 }
