@@ -1,7 +1,8 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
+#The special matrix is created here with methods for get, get inverse
+#and set inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
   mat <- NULL
@@ -15,6 +16,8 @@ makeCacheMatrix <- function(x = matrix()) {
   list(set = set, get = get, setinv = setinv, getinv = getinv)
 }
 
+#The cache solve function attempts to retrieve the cached matrix and 
+#if not found, it solves it through the solve function.
 cacheSolve <- function(x, ...) {
   m<- x$getinv()
   if(!is.null(m)){
